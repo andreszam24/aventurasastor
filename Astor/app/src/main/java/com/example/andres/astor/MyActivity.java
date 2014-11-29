@@ -1,18 +1,26 @@
 package com.example.andres.astor;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends Activity implements OnClickListener {
+    private Button btnface;
+    private Button btngmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        this.btnface=(Button)findViewById(R.id.btnface);
+        this.btnface.setOnClickListener(this);
     }
 
 
@@ -22,7 +30,10 @@ public class MyActivity extends Activity {
         getMenuInflater().inflate(R.menu.my, menu);
         return true;
     }
-
+    @Override
+    public void onClick(View v){
+        startActivity (new Intent(getApplicationContext(), MenuActivity.class));
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
