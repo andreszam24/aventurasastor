@@ -11,7 +11,8 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.example.andres.astor.SplashActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,16 +21,18 @@
         </activity>
         <activity
             android:name="com.example.andres.astor.MyActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:name="com.example.andres.astor.VideoActivity"
-            android:label="@string/title_activity_video" >
+            android:label="@string/title_activity_video"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:name=".MenuActivity"
             android:label="@string/app_name"
-            >
+            android:screenOrientation="landscape">
         </activity>
     </application>
 
