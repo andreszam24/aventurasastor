@@ -3,8 +3,10 @@ package com.example.andres.astor;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,7 +41,20 @@ public class VideoActivity extends Activity {
 
         //initialize the VideoView
         myVideoView = (VideoView) findViewById(R.id.videoView1);
-
+        myVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                finish();
+                Handler HANDLER = new Handler();
+                HANDLER.postDelayed(new Runnable() {
+                    public void run() {
+                        finish();
+                        startActivity (new Intent(getApplicationContext(), MyActivity.class));
+                        overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+                    }
+                }, 2000);
+            }
+        });
         try {
             //set the media controller in the VideoView
             //myVideoView.setMediaController(mediaControls);
