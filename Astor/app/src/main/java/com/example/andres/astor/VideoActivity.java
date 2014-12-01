@@ -44,7 +44,7 @@ public class VideoActivity extends Activity {
         myVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
-                finish();
+                
                 Handler HANDLER = new Handler();
                 HANDLER.postDelayed(new Runnable() {
                     public void run() {
