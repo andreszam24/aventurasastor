@@ -16,6 +16,7 @@ public class Escenario12 extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.escena12);
         btnplay=(Button)findViewById(R.id.btnplayescena12);
+        btnplay.setOnClickListener(this);
 
     }
 
