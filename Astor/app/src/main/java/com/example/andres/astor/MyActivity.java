@@ -20,7 +20,9 @@ public class MyActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         this.btnface=(Button)findViewById(R.id.btnface);
+        btngmail=(Button)findViewById(R.id.btngmail);
         this.btnface.setOnClickListener(this);
+        this.btngmail.setOnClickListener(this);
     }
 
 

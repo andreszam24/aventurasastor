@@ -12,9 +12,9 @@
 
     <Button
         android:layout_width="100dp"
-        android:layout_height="90dp"
+        android:layout_height="100dp"
         android:id="@+id/btnplay"
-        android:layout_marginLeft="163dp"
+        android:layout_marginLeft="103dp"
         android:background="@drawable/imgplay"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
 
     <Button
         android:layout_width="100dp"
-        android:layout_height="90dp"
+        android:layout_height="100dp"
         android:id="@+id/btnconf"
         android:layout_toEndOf="@+id/btnplay"
         android:layout_marginLeft="38dp"
@@ -31,7 +31,7 @@
         android:layout_toRightOf="@+id/btnplay" />
     <Button
         android:layout_width="100dp"
-        android:layout_height="90dp"
+        android:layout_height="100dp"
         android:id="@+id/btnhelp"
         android:layout_toEndOf="@+id/btnconf"
         android:layout_marginLeft="38dp"
