@@ -2,10 +2,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.example.andres.astor.VideoActivity">
+    tools:context="com.example.andres.astor.VideoActivity"
+    android:gravity="center_vertical"
+    android:background="#ff000000"
+    android:padding="0dp">
 
     <VideoView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/videoView1" />
+        android:id="@+id/videoView1"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="0dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentTop="false"
+        android:padding="0dp"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/btnskip"
+        android:background="@drawable/imgplay"
+        android:layout_marginLeft="520dp"
+        android:layout_marginTop="270dp" />
 </RelativeLayout>

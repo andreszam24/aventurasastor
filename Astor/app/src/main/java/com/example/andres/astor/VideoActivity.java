@@ -15,20 +15,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
 
-public class VideoActivity extends Activity {
+public class VideoActivity extends Activity implements View.OnClickListener{
 
     private VideoView myVideoView;
     private int position = 0;
     private ProgressDialog progressDialog;
     private MediaController mediaControls;
+    private Button btnskip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Log.d("__ONTOUCH__","entra");
         setContentView(R.layout.activity_video);
@@ -60,7 +67,7 @@ public class VideoActivity extends Activity {
             //myVideoView.setMediaController(mediaControls);
 
             //set the uri of the video to be played
-            myVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.blackberry));
+            myVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ultimo));
 
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
@@ -81,6 +88,8 @@ public class VideoActivity extends Activity {
                 }
             }
         });
+        this.btnskip=(Button)findViewById(R.id.btnskip);
+        btnskip.setOnClickListener(this);
     }
 
     @Override
@@ -119,5 +128,10 @@ public class VideoActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(getApplicationContext(),MyActivity.class));
     }
 }
