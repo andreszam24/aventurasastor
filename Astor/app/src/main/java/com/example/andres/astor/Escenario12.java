@@ -7,21 +7,20 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by Andres on 01/12/2014.
+ * Created by Andres on 02/12/2014.
  */
-public class Escenario11 extends Activity implements View.OnClickListener {
+public class Escenario12 extends Activity implements View.OnClickListener {
     private Button btnplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.escena11);
-        btnplay=(Button)findViewById(R.id.btnplayescena11);
-        btnplay.setOnClickListener(this);
+        setContentView(R.layout.escena12);
+        btnplay=(Button)findViewById(R.id.btnplayescena12);
+
     }
 
     @Override
     public void onClick(View view) {
-        startActivity(new Intent(getApplicationContext(),Escenario12.class));
-
+        startActivity(new Intent(getApplicationContext(),Escenario13.class));
     }
 }
